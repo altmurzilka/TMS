@@ -37,10 +37,10 @@ class ViewController: UIViewController {
         
         let message = Manager.shared.sell(quantity1: Int(myStepper1.value), quantity2: Int(myStepper2.value), quantity3: Int(myStepper3.value))
         
-        let alert = UIAlertController(title: "Total sum: \(message)", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Total sum:", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Pay", style: .default) { action in
             print(message)
-            self.zeroLabels()
+            self.leftoversUpdate()
         }
         
         alert .addAction(action)
@@ -93,19 +93,26 @@ class ViewController: UIViewController {
         self.counter1.text = String(0)
         self.counter2.text = String(0)
         self.counter3.text = String(0)
-        self.myStepper1.maximumValue = self.myStepper1.maximumValue - self.myStepper1.value
-        self.myStepper2.maximumValue = self.myStepper2.maximumValue - self.myStepper2.value
-        self.myStepper3.maximumValue = self.myStepper3.maximumValue - self.myStepper3.value
         self.myStepper1.value = 0
         self.myStepper2.value = 0
         self.myStepper3.value = 0
     }
     
+    func leftoversUpdate() {
+        self.zeroLabels()
+        self.myStepper1.maximumValue = self.myStepper1.maximumValue - self.myStepper1.value
+        self.myStepper2.maximumValue = self.myStepper2.maximumValue - self.myStepper2.value
+        self.myStepper3.maximumValue = self.myStepper3.maximumValue - self.myStepper3.value
+    }
+    
     func returnMaxValues () {
+        self.zeroLabels()
         self.myStepper1.maximumValue = 100
         self.myStepper2.maximumValue = 100
         self.myStepper3.maximumValue = 100
     }
+    
+    
     
 }
 
