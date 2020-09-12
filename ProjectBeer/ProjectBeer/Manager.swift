@@ -9,28 +9,44 @@ import Foundation
 
 class Manager {
     
+    var beer1 = Beer(label: "Hobgoblin", price: 2800, country: "England", quantity: 100)
+    var beer2 = Beer(label: "Fuller's", price: 3000, country: "England", quantity: 100)
+    var beer3 = Beer(label: "Hacker-Pschorr", price: 3200, country: "Germany", quantity: 100)
+    
     static let shared = Manager()
+    var checking: Bool = false
     
     private init() {}
     
-    func beer(quantity: Int) -> Int {
-        var sum = 0
-        sum += quantity
-        return sum
-    }
-    
     // Проверка выручки в конце дня || Продажа
-    func sell(total1: Int, total2: Int, total3: Int) -> String {
-        return "\(total1 + total2 + total3)"
+    func sell(quantity1: Int, quantity2: Int, quantity3: Int) -> String {
+        checking = true
+        beer1.quantity = beer1.quantity - quantity1
+        beer2.quantity = beer2.quantity - quantity2
+        beer3.quantity = beer3.quantity - quantity3
+        print("\(beer1.label) - \(quantity1 * beer1.price)")
+        print("\(beer2.label) - \(quantity2 * beer2.price)")
+        print("\(beer3.label) - \(quantity3 * beer3.price)")
+        return "\(quantity1 * beer1.price + quantity2 * beer2.price + quantity3 * beer3.price)"
     }
     
-    // проверка остатков || закрытие дня
-    func newShift(beer1: Int, beer2: Int, beer3: Int) -> String {
-        return "Hobgoblin - \(100 - beer1), Fuller's - \(100 - beer2), Hacker-Pschorr - \(100 - beer3)"
+    // проверка остатков || закрытие
+    func newShift(remnant1: Int, remnant2: Int, remnant3: Int) -> String {
+        if checking == false {
+            return "\(beer1.label) - \(beer1.quantity), \(beer2.label) - \(beer2.quantity), \(beer3.label) - \(beer3.quantity)"
+        } else {
+            checking.toggle()
+            beer1.quantity = beer1.quantity - remnant1
+            beer2.quantity = beer2.quantity - remnant2
+            beer3.quantity = beer3.quantity - remnant3
+            return "\(beer1.label) - \(beer1.quantity), \(beer2.label) - \(beer2.quantity), \(beer3.label) - \(beer3.quantity)"
+        }
     }
     
     // начало новой смены - обнуление выручки || новый день
-    func quantity(b1: Int, b2: Int, b3: Int) -> (Int, Int, Int) {
-        return (100, 100, 100)
+    func restoreQuantity() {
+        beer1.quantity = 100
+        beer2.quantity = 100
+        beer3.quantity = 100
     }
 }
