@@ -88,7 +88,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     func zeroLabels() {
         self.counter1.text = String(0)
         self.counter2.text = String(0)
