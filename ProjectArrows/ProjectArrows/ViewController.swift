@@ -8,10 +8,10 @@
 import UIKit
 
 enum Direction {
-    case up(_ label: String)
-    case down(_ label: String)
-    case left(_ label: String)
-    case right(_ label: String)
+    case up
+    case down
+    case left
+    case right
 }
 
 class ViewController: UIViewController {
@@ -69,62 +69,84 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonActionUp(sender: UIButton!) {
-        self.moveCircel(direction: .up("UP"))
+        if !self.canMove(direction: .up) {
+            myLabel.textColor = .red
+            myLabel.text = "Error. Can't move up."
+        } else {
+            self.moveCircel(direction: .up)
+        }
     }
     
     @objc func buttonActionDown(sender: UIButton!) {
-        self.moveCircel(direction: .down("DOWN"))
+        if !self.canMove(direction: .down) {
+            myLabel.textColor = .red
+            myLabel.text = "Error. Can't move down."
+        } else {
+            self.moveCircel(direction: .down)
+        }
     }
     
     @objc func buttonActionLeft(sender: UIButton!) {
-        self.moveCircel(direction: .left("LEFT"))
+        if !self.canMove(direction: .left) {
+            myLabel.textColor = .red
+            myLabel.text = "Error. Can't move left."
+        } else {
+            self.moveCircel(direction: .left)
+        }
     }
     
     @objc func buttonActionRight(sender: UIButton!) {
-        self.moveCircel(direction: .right("RIGHT"))
+        if !self.canMove(direction: .right) {
+            myLabel.textColor = .red
+            myLabel.text = "Error. Can't move right."
+        } else {
+            self.moveCircel(direction: .right)
+        }
     }
     
     func moveCircel(direction: Direction) {
         switch direction {
-        case .up(let label):
+        case .up:
+            myView.frame.origin.y -= step
+            myLabel.textColor = .black
+            myLabel.text = "UP"
+        case .down:
+            myView.frame.origin.y += step
+            myLabel.textColor = .black
+            myLabel.text = "DOWN"
+        case .left:
+            myView.frame.origin.x -= step
+            myLabel.textColor = .black
+            myLabel.text = "LEFT"
+        case .right:
+            myView.frame.origin.x += step
+            myLabel.textColor = .black
+            myLabel.text = "RIGHT"
+        }
+    }
+    
+    func canMove(direction: Direction) -> Bool {
+        switch direction {
+        case .up:
             if myView.frame.origin.y <= 32.0 {
-                myLabel.textColor = .red
-                myLabel.text = "Error. Can't move \(label)"
-            } else {
-                myView.frame.origin.y -= step
-                myLabel.textColor = .black
-                myLabel.text = label
+                return false
             }
-        case .down(let label):
+        case .down:
             let height = self.view.frame.size.height
             if myView.frame.origin.y >= height / 2 + 70 {
-                myLabel.textColor = .red
-                myLabel.text = "Error. Can't move \(label)"
-            } else {
-                myView.frame.origin.y += step
-                myLabel.textColor = .black
-                myLabel.text = label
+                return false
             }
-        case .left(let label):
+        case .left:
             if myView.frame.origin.x <= 10.0 {
-                myLabel.textColor = .red
-                myLabel.text = "Error. Can't move \(label)"
-            } else {
-                myView.frame.origin.x -= step
-                myLabel.textColor = .black
-                myLabel.text = label
+                return false
             }
-        case .right(let label):
+        case .right:
             let width = self.view.frame.size.width
             if myView.frame.origin.x >= width - 110.0 {
-                myLabel.textColor = .red
-                myLabel.text = "Error. Can't move \(label)"
-            } else {
-                myView.frame.origin.x += step
-                myLabel.textColor = .black
-                myLabel.text = label
+                return false
             }
         }
+        return true
     }
     
     func newColor() -> UIColor {
