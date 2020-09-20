@@ -7,9 +7,17 @@
 
 import UIKit
 
+enum Direction {
+    case up(_ label: String)
+    case down(_ label: String)
+    case left(_ label: String)
+    case right(_ label: String)
+}
+
 class ViewController: UIViewController {
     
     let myView = UIView()
+    let myLabel = UILabel()
     
     var step: CGFloat = 50
     
@@ -31,6 +39,12 @@ class ViewController: UIViewController {
         myView.layer.cornerRadius = 0.5 * myView.bounds.size.width
         myView.backgroundColor = newColor()
         self.view.addSubview(myView)
+        
+        myLabel.frame = CGRect(x: width/2, y: height/2 - 300, width: 200, height: 21)
+        myLabel.center = CGPoint(x: width/2, y: height/2 - 250)
+        myLabel.textAlignment = .center
+        myLabel.text = ""
+        self.view.addSubview(myLabel)
         
         buttonUp.setImage(UIImage(systemName: "arrow.up.square", withConfiguration: configuration), for: .normal)
         buttonUp.frame = CGRect(x: width / 2 - 25, y: height / 2 + 200, width: 50, height: 50)
@@ -55,35 +69,61 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonActionUp(sender: UIButton!) {
-        if myView.frame.origin.y <= 10.0 {
-            //   print("error")
-        } else {
-            myView.frame.origin.y -= step
-            //  print("frame - \(myView.frame.origin.y)")
-            //  print(myView.bounds.origin.y)
-        }
+        self.moveCircel(direction: .up("UP"))
     }
     
     @objc func buttonActionDown(sender: UIButton!) {
-        let height = self.view.frame.size.height
-        if myView.frame.origin.y >= height / 2 + 70 {
-        } else {
-            myView.frame.origin.y += step
-        }
+        self.moveCircel(direction: .down("DOWN"))
     }
     
     @objc func buttonActionLeft(sender: UIButton!) {
-        if myView.frame.origin.x <= 10.0 {
-        } else {
-            myView.frame.origin.x -= step
-        }
+        self.moveCircel(direction: .left("LEFT"))
     }
     
     @objc func buttonActionRight(sender: UIButton!) {
-        let width = self.view.frame.size.width
-        if myView.frame.origin.x >= width - 110.0 {
-        } else {
-            myView.frame.origin.x += step
+        self.moveCircel(direction: .right("RIGHT"))
+    }
+    
+    func moveCircel(direction: Direction) {
+        switch direction {
+        case .up(let label):
+            if myView.frame.origin.y <= 32.0 {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move \(label)"
+            } else {
+                myView.frame.origin.y -= step
+                myLabel.textColor = .black
+                myLabel.text = label
+            }
+        case .down(let label):
+            let height = self.view.frame.size.height
+            if myView.frame.origin.y >= height / 2 + 70 {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move \(label)"
+            } else {
+                myView.frame.origin.y += step
+                myLabel.textColor = .black
+                myLabel.text = label
+            }
+        case .left(let label):
+            if myView.frame.origin.x <= 10.0 {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move \(label)"
+            } else {
+                myView.frame.origin.x -= step
+                myLabel.textColor = .black
+                myLabel.text = label
+            }
+        case .right(let label):
+            let width = self.view.frame.size.width
+            if myView.frame.origin.x >= width - 110.0 {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move \(label)"
+            } else {
+                myView.frame.origin.x += step
+                myLabel.textColor = .black
+                myLabel.text = label
+            }
         }
     }
     

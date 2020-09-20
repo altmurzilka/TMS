@@ -40,13 +40,8 @@ class ViewController: UIViewController {
         let width = self.view.frame.size.width
         let height = self.view.frame.size.height
         
-        print(width)
-        print(height)
-        
         let row = Int(height/side)
-        print("Row - \(row)")
         let column = Int(width/side)
-        print("Column - \(column)")
         
         for _ in 0..<row {
             

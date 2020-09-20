@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - let
     let button = UIButton()
     
+    //MARK: - lifecycle func
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,12 +24,17 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
     
+    //MARK: - flow func
     @objc func buttonAction(sender: UIButton!) {
         button.frame = CGRect(x: Int.random(in: 1...(Int(self.view.frame.size.width) - 100)), y: Int.random(in: 1...(Int(self.view.frame.size.height)) - 100), width: 100, height: 100)
         button.backgroundColor = newColor()
     }
     
-    
+}
+
+
+//MARK: - extensions
+private extension ViewController {
     func newColor() -> UIColor {
         
         let red = CGFloat(drand48())
@@ -37,6 +44,4 @@ class ViewController: UIViewController {
         return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
         
     }
-    
 }
-
