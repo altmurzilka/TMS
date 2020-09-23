@@ -23,11 +23,11 @@ class ViewController: UIViewController {
     @IBAction func buttonPresses2(_ sender: UIButton) {
         self.myView.layer.cornerRadius = self.myView.frame.size.width / 2
     }
-    //    override func viewDidLayoutSubviews() {
+//        override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
 //        // all view have their places
 //    }
-//    
+//
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(true)
 //        // scree is ready to appear
