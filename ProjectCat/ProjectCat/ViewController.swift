@@ -16,13 +16,13 @@ class ViewController: UIViewController {
     //MARK: - lifecycle func
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         button.frame = CGRect(x: self.view.frame.size.width / 2 - 50, y: self.view.frame.size.height / 2 - 50, width: 100, height: 100)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.backgroundColor = newColor()
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.view.addSubview(button)
     }
+    
     
     //MARK: - flow func
     @objc func buttonAction(sender: UIButton!) {
