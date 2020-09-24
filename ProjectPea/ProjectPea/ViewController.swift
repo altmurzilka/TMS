@@ -11,9 +11,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func ButtonPressed(_ sender: UIButton) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        
+        controller.text = "Oh Hi Mark"
+        
+        self.present(controller, animated: true, completion: nil)
+    }
+    
 }
 
