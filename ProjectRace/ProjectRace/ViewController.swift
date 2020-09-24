@@ -9,11 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
     @IBAction func NewGameButton(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "NewGameViewController") as! NewGameViewController
         

@@ -13,10 +13,6 @@ class FifthViewController: UIViewController {
     
     var text = ""
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.myLabel.text = text

@@ -16,11 +16,6 @@ class SecondViewController: UIViewController {
     var name = ""
     var filling = ""
     var topping = ""
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

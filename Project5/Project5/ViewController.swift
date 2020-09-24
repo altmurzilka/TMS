@@ -8,22 +8,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(tapRecognizer(_:)))
+        self.view.addGestureRecognizer(recognizer)
+        
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipeDetected(_:)))
+        leftSwipe.direction = .left
+        self.view.addGestureRecognizer(leftSwipe)
     }
-
+    
     @IBAction func Button(_ sender: UIButton) {
-//        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-//
-//        controller.text = "OLOLO"
-//        self.present(controller, animated: true, completion: nil)
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        //
+        //        controller.text = "OLOLO"
+        //        self.present(controller, animated: true, completion: nil)
         
-        let controller = UIStoryboard(name: "SecondStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
+        //        let controller = UIStoryboard(name: "SecondStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
         
-//                controller.text = "OLOLO"
-//                self.present(controller, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func tapRecognizer(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    @objc func leftSwipeDetected(_ sender: UISwipeGestureRecognizer) {
+        print("left swipe")
     }
     
 }

@@ -11,12 +11,6 @@ class SecondViewController: UIViewController {
     
     var text = ""
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
     @IBAction func ButtonPressed(_ sender: UIButton) {
         
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController

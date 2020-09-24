@@ -10,11 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     let pancake = Pancake(name: "MelonPancake", filling: "melon", topping: "strawberry")
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
