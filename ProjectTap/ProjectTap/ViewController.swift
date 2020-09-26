@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let myPanGesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
+        myView.addGestureRecognizer(myPanGesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         let width = self.view.frame.size.width
         let height = self.view.frame.size.height
         
@@ -22,8 +29,6 @@ class ViewController: UIViewController {
         myView.backgroundColor = randomColor()
         self.view.addSubview(myView)
         
-        let myPanGesture = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
-        myView.addGestureRecognizer(myPanGesture)
     }
     
     @objc func panGesture(_ sender: UIPanGestureRecognizer) {

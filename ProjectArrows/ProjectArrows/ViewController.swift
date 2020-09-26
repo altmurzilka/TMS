@@ -21,21 +21,32 @@ class ViewController: UIViewController {
     
     var step: CGFloat = 50
     
-    let buttonUp = UIButton()
-    let buttonDown = UIButton()
-    let buttonRight = UIButton()
-    let buttonLeft = UIButton()
-    
     let configuration = UIImage.SymbolConfiguration(pointSize: 100)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeUp.direction = .up
+        self.view.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
+        
         let width = self.view.frame.size.width
         let height = self.view.frame.size.height
         
-        myView.frame = CGRect(x: width / 2 - 50, y: height / 2 - 200, width: 100, height: 100)
+        myView.frame = CGRect(x: width / 2 - 50, y: height / 2 - 50, width: 100, height: 100)
         myView.layer.cornerRadius = 0.5 * myView.bounds.size.width
         myView.backgroundColor = newColor()
         self.view.addSubview(myView)
@@ -46,63 +57,43 @@ class ViewController: UIViewController {
         myLabel.text = ""
         self.view.addSubview(myLabel)
         
-        buttonUp.setImage(UIImage(systemName: "arrow.up.square", withConfiguration: configuration), for: .normal)
-        buttonUp.frame = CGRect(x: width / 2 - 25, y: height / 2 + 200, width: 50, height: 50)
-        buttonUp.addTarget(self, action: #selector(buttonActionUp), for: .touchUpInside)
-        self.view.addSubview(buttonUp)
-        
-        buttonDown.setImage(UIImage(systemName: "arrow.down.square", withConfiguration: configuration), for: .normal)
-        buttonDown.frame = CGRect(x: width / 2 - 25, y: height / 2 + 250, width: 50, height: 50)
-        buttonDown.addTarget(self, action: #selector(buttonActionDown), for: .touchUpInside)
-        self.view.addSubview(buttonDown)
-        
-        buttonLeft.setImage(UIImage(systemName: "arrow.left.square", withConfiguration: configuration), for: .normal)
-        buttonLeft.frame = CGRect(x: width / 2 - 75, y: height / 2 + 250, width: 50, height: 50)
-        buttonLeft.addTarget(self, action: #selector(buttonActionLeft), for: .touchUpInside)
-        self.view.addSubview(buttonLeft)
-        
-        buttonRight.setImage(UIImage(systemName: "arrow.right.square", withConfiguration: configuration), for: .normal)
-        buttonRight.frame = CGRect(x: width / 2 + 25, y: height / 2 + 250, width: 50, height: 50)
-        buttonRight.addTarget(self, action: #selector(buttonActionRight), for: .touchUpInside)
-        self.view.addSubview(buttonRight)
-        
     }
     
-    @objc func buttonActionUp(sender: UIButton!) {
-        if !self.canMove(direction: .up) {
-            myLabel.textColor = .red
-            myLabel.text = "Error. Can't move up."
-        } else {
-            self.moveCircel(direction: .up)
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == .right {
+            if !self.canMove(direction: .right) {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move right."
+            } else {
+                self.moveCircel(direction: .right)
+            }
+        }
+        else if gesture.direction == .left {
+            if !self.canMove(direction: .left) {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move left."
+            } else {
+                self.moveCircel(direction: .left)
+            }
+        }
+        else if gesture.direction == .up {
+            if !self.canMove(direction: .up) {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move up."
+            } else {
+                self.moveCircel(direction: .up)
+            }
+        }
+        else if gesture.direction == .down {
+            if !self.canMove(direction: .down) {
+                myLabel.textColor = .red
+                myLabel.text = "Error. Can't move down."
+            } else {
+                self.moveCircel(direction: .down)
+            }
         }
     }
     
-    @objc func buttonActionDown(sender: UIButton!) {
-        if !self.canMove(direction: .down) {
-            myLabel.textColor = .red
-            myLabel.text = "Error. Can't move down."
-        } else {
-            self.moveCircel(direction: .down)
-        }
-    }
-    
-    @objc func buttonActionLeft(sender: UIButton!) {
-        if !self.canMove(direction: .left) {
-            myLabel.textColor = .red
-            myLabel.text = "Error. Can't move left."
-        } else {
-            self.moveCircel(direction: .left)
-        }
-    }
-    
-    @objc func buttonActionRight(sender: UIButton!) {
-        if !self.canMove(direction: .right) {
-            myLabel.textColor = .red
-            myLabel.text = "Error. Can't move right."
-        } else {
-            self.moveCircel(direction: .right)
-        }
-    }
     
     func moveCircel(direction: Direction) {
         switch direction {
@@ -128,12 +119,12 @@ class ViewController: UIViewController {
     func canMove(direction: Direction) -> Bool {
         switch direction {
         case .up:
-            if myView.frame.origin.y <= 32.0 {
+            if myView.frame.origin.y <= 82.0 {
                 return false
             }
         case .down:
             let height = self.view.frame.size.height
-            if myView.frame.origin.y >= height / 2 + 70 {
+            if myView.frame.origin.y >= height - 150.0 {
                 return false
             }
         case .left:
@@ -142,7 +133,7 @@ class ViewController: UIViewController {
             }
         case .right:
             let width = self.view.frame.size.width
-            if myView.frame.origin.x >= width - 110.0 {
+            if myView.frame.origin.x >= width - 150.0{
                 return false
             }
         }
