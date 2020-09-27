@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     let myView = UIView()
     let myLabel = UILabel()
     
-    var step: CGFloat = 50
+    var step: CGFloat = 80
     
     let configuration = UIImage.SymbolConfiguration(pointSize: 100)
     
