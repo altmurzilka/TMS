@@ -12,19 +12,19 @@ class ViewController: UIViewController {
     @IBAction func NewGameButton(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "NewGameViewController") as! NewGameViewController
         
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func RecordsButton(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "RecordsViewController") as! RecordsViewController
         
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func Settings(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
         
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

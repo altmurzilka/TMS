@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         controller.filling = pancake.filling
         controller.topping = pancake.topping
         
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

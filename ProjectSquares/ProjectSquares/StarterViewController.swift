@@ -18,7 +18,7 @@ class StarterViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
 }

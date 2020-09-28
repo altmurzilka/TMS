@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         print(compareTwoStrings(stringOne: "aab", stringTwo: "áab"))
         //self.broken()
         print("\(number) to the power of 2 equals \(powersOfTwo(number: number))")
-        print("Factorial of \(number) equals \(factirial(number: number))")
+//        print("Factorial of \(number) equals \(factirial(number: number))")
     }
     
     // task 2

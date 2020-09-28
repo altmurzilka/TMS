@@ -14,7 +14,7 @@ class ForthViewController: UIViewController {
     @IBAction func ButtonPressed(_ sender: UIButton) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "FifthViewController") as! FifthViewController
         controller.text = self.text
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
    

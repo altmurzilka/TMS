@@ -7,10 +7,23 @@
 
 import UIKit
 
+extension Array where Element: Equatable {
+    
+    mutating func remove(object: Element) {
+        guard let index = firstIndex(of: object) else {return}
+        remove(at: index)
+    }
+}
+
 class ViewController: UIViewController {
     
     var x : CGFloat = 0.0
     var y : CGFloat = 0.0
+    
+    var viewArray = [UIView]()
+    var tagArray = [Int]()
+    
+    var counter = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +44,42 @@ class ViewController: UIViewController {
         guard sender.view != nil else { return }
         
         if sender.state == .ended {
+            
             let myView = UIView()
-            myView.frame = CGRect(x: self.x - 50, y: self.y - 50, width: 100, height: 100)
+            x = x - 50
+            y = y - 50
+            myView.frame = CGRect(x: self.x, y: self.y, width: 100, height: 100)
             myView.layer.cornerRadius = 0.5 * myView.bounds.size.width
+            myView.tag = self.counter
             myView.backgroundColor = self.randomColor()
             self.view.addSubview(myView)
+            
+            viewArray.append(myView)
+            
+            for i in viewArray {
+                if i.frame.intersects(myView.frame) {
+                    tagArray.append(myView.tag)
+                    removeSubview()
+                }
+            }
         }
+        counter = counter + 1
     }
     
-    
-    
+    func removeSubview(){
+        
+        print(viewArray)
+        
+        for i in tagArray {
+            if let viewWithTag = self.view.viewWithTag(i) {
+                viewWithTag.removeFromSuperview()
+            }
+        }
+        
+    }
     
 }
+
 
 
 //MARK: - extensions

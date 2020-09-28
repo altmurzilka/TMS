@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         
         controller.text = "Oh Hi Mark"
         
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

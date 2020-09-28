@@ -16,9 +16,8 @@ class ThirdViewController: UIViewController {
         
         controller.text = self.text
         
-        self.present(controller, animated: true, completion: nil)
-    }
+        self.navigationController?.pushViewController(controller, animated: true)
     
-
+    }
 
 }
