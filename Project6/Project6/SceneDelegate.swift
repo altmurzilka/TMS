@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  TestProject
+//  Project6
 //
-//  Created by Алтын on 9/27/20.
+//  Created by Алтын on 9/29/20.
 //
 
 import UIKit
