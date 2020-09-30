@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F10164B52524F7360076D31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10164B42524F7360076D31E /* AppDelegate.swift */; };
-		F10164B72524F7360076D31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10164B62524F7360076D31E /* SceneDelegate.swift */; };
 		F10164B92524F7360076D31E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10164B82524F7360076D31E /* ViewController.swift */; };
 		F10164BC2524F7360076D31E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10164BA2524F7360076D31E /* Main.storyboard */; };
 		F10164BE2524F7360076D31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10164BD2524F7360076D31E /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		F10164B12524F7350076D31E /* ProjectConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10164B42524F7360076D31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F10164B62524F7360076D31E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F10164B82524F7360076D31E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F10164BB2524F7360076D31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F10164BD2524F7360076D31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				F10164B42524F7360076D31E /* AppDelegate.swift */,
-				F10164B62524F7360076D31E /* SceneDelegate.swift */,
 				F10164B82524F7360076D31E /* ViewController.swift */,
 				F10164BA2524F7360076D31E /* Main.storyboard */,
 				F10164BD2524F7360076D31E /* Assets.xcassets */,
@@ -139,7 +136,6 @@
 			files = (
 				F10164B92524F7360076D31E /* ViewController.swift in Sources */,
 				F10164B52524F7360076D31E /* AppDelegate.swift in Sources */,
-				F10164B72524F7360076D31E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
