@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F186623C251CE7F6000395BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186623B251CE7F6000395BC /* AppDelegate.swift */; };
-		F186623E251CE7F6000395BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186623D251CE7F6000395BC /* SceneDelegate.swift */; };
 		F1866240251CE7F6000395BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186623F251CE7F6000395BC /* ViewController.swift */; };
 		F1866243251CE7F6000395BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1866241251CE7F6000395BC /* Main.storyboard */; };
 		F1866245251CE7F8000395BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1866244251CE7F8000395BC /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		F1866238251CE7F6000395BC /* ProjectRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F186623B251CE7F6000395BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F186623D251CE7F6000395BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F186623F251CE7F6000395BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1866242251CE7F6000395BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1866244251CE7F8000395BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				F186623B251CE7F6000395BC /* AppDelegate.swift */,
-				F186623D251CE7F6000395BC /* SceneDelegate.swift */,
 				F186623F251CE7F6000395BC /* ViewController.swift */,
 				F1866241251CE7F6000395BC /* Main.storyboard */,
 				F1866244251CE7F8000395BC /* Assets.xcassets */,
@@ -149,7 +146,6 @@
 				F1866240251CE7F6000395BC /* ViewController.swift in Sources */,
 				F1866250251CEA1B000395BC /* NewGameViewController.swift in Sources */,
 				F186623C251CE7F6000395BC /* AppDelegate.swift in Sources */,
-				F186623E251CE7F6000395BC /* SceneDelegate.swift in Sources */,
 				F1866252251CEA28000395BC /* RecordsViewController.swift in Sources */,
 				F1866254251CEA36000395BC /* SettingsViewController.swift in Sources */,
 			);
