@@ -57,13 +57,56 @@
                     <view key="view" contentMode="scaleToFill" id="gNx-UN-ZwT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVb-lt-GfJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Jq-KE-ZfD">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="818"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="ydl-Gd-KLq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrG-3i-flZ">
+                                        <rect key="frame" x="389" y="0.0" width="25" height="818"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="ASN-Wh-r8T"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="231-sm-G3k">
+                                        <rect key="frame" x="25" y="0.0" width="364" height="818"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8Jq-KE-ZfD" firstAttribute="leading" secondItem="WVb-lt-GfJ" secondAttribute="leading" id="1B5-ew-erq"/>
+                                    <constraint firstItem="8Jq-KE-ZfD" firstAttribute="top" secondItem="WVb-lt-GfJ" secondAttribute="top" id="Pd7-Na-OSe"/>
+                                    <constraint firstAttribute="bottom" secondItem="231-sm-G3k" secondAttribute="bottom" id="Z2C-Id-ND9"/>
+                                    <constraint firstItem="231-sm-G3k" firstAttribute="top" secondItem="WVb-lt-GfJ" secondAttribute="top" id="ZKG-7l-3gU"/>
+                                    <constraint firstAttribute="trailing" secondItem="MrG-3i-flZ" secondAttribute="trailing" id="eQ0-af-KUj"/>
+                                    <constraint firstItem="231-sm-G3k" firstAttribute="leading" secondItem="8Jq-KE-ZfD" secondAttribute="trailing" id="jq2-DL-lkK"/>
+                                    <constraint firstAttribute="bottom" secondItem="MrG-3i-flZ" secondAttribute="bottom" id="jzy-gS-Ud6"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Jq-KE-ZfD" secondAttribute="bottom" id="mBJ-Rw-5qM"/>
+                                    <constraint firstItem="MrG-3i-flZ" firstAttribute="top" secondItem="WVb-lt-GfJ" secondAttribute="top" id="osh-wk-fde"/>
+                                    <constraint firstItem="MrG-3i-flZ" firstAttribute="leading" secondItem="231-sm-G3k" secondAttribute="trailing" id="yiN-fe-H0Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XU7-1S-G6L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WVb-lt-GfJ" firstAttribute="top" secondItem="XU7-1S-G6L" secondAttribute="top" id="cWs-eY-4XS"/>
+                            <constraint firstItem="WVb-lt-GfJ" firstAttribute="leading" secondItem="XU7-1S-G6L" secondAttribute="leading" id="fA7-de-B8x"/>
+                            <constraint firstItem="XU7-1S-G6L" firstAttribute="trailing" secondItem="WVb-lt-GfJ" secondAttribute="trailing" id="fAe-0B-ZBz"/>
+                            <constraint firstItem="XU7-1S-G6L" firstAttribute="bottom" secondItem="WVb-lt-GfJ" secondAttribute="bottom" id="pMP-YQ-0aZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OzB-QJ-wy9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="-552"/>
+            <point key="canvasLocation" x="1018.840579710145" y="-552.45535714285711"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="9Vb-Pi-bTN">
@@ -115,6 +158,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="road" width="400" height="400"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

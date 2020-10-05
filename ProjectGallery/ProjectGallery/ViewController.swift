@@ -21,33 +21,43 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet var myView: UIImageView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         myView.image = UIImage(named: imageName)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
     
     @IBAction func pressLeft(_ sender: UIButton) {
+        
         if self.itemIndex > 0 {
             self.itemIndex = self.itemIndex - 1
             myView.image = UIImage(named: contentImages[itemIndex])
+            
         } else if self.itemIndex == 0 {
             self.itemIndex = contentImages.count - 1
             myView.image = UIImage(named: contentImages[itemIndex])
+            
         }
     }
     
     @IBAction func pressRight(_ sender: UIButton) {
+        
         if itemIndex + 1 < contentImages.count {
             self.itemIndex = self.itemIndex + 1
             myView.image = UIImage(named: contentImages[itemIndex])
+            
         } else if self.itemIndex == contentImages.count - 1 {
             self.itemIndex = 0
             myView.image = UIImage(named: contentImages[itemIndex])
+            
         }
     }
-
+    
     
 }
 
