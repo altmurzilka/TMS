@@ -27,16 +27,19 @@ class ViewController: UIViewController {
         myView.image = UIImage(named: imageName)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
+    
     
     @IBAction func pressLeft(_ sender: UIButton) {
         
         if self.itemIndex > 0 {
             self.itemIndex = self.itemIndex - 1
-            myView.image = UIImage(named: contentImages[itemIndex])
+//            myView.image = UIImage(named: contentImages[itemIndex])
+            
+            UIView.transition(with: self.myView,
+                              duration: 1.0,
+                              options: .transitionCurlUp,
+                              animations: { self.myView.image = UIImage(named: self.contentImages[self.itemIndex])
+                              }, completion: nil)
             
         } else if self.itemIndex == 0 {
             self.itemIndex = contentImages.count - 1

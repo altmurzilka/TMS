@@ -9,6 +9,8 @@ import UIKit
 
 class NewGameViewController: UIViewController {
     
+    let myImageView = UIImageView()
+    
     @IBOutlet var supportingRoadView: UIImageView!
     @IBOutlet var roadView: UIImageView!
     @IBOutlet var carImage: UIImageView!
@@ -21,20 +23,29 @@ class NewGameViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         roadMove()
-        print(view.frame.size.width)
-        
-        var imageView : UIImageView
-        imageView  = UIImageView(frame:CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>));
-        imageView.image = UIImage(named:"image.jpg")
-        self.view.addSubview(imageView)
     }
+    
     
     func roadMove() {
         UIView.animate(withDuration: 2, delay: 0.0, options: [.repeat, .curveLinear], animations: {
             self.roadView.frame = self.roadView.frame.offsetBy(dx: 0.0, dy: self.roadView.frame.size.height)
             self.supportingRoadView.frame = self.supportingRoadView.frame.offsetBy(dx: 0.0, dy: self.supportingRoadView.frame.size.height)
         }, completion: nil)
+        
+//        obstacleView()
+//        UIView.animate(withDuration: 1, delay: 0.0, options: [.curveLinear, .autoreverse], animations: {
+//            self.myImageView.frame = self.myImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height)
+//        }, completion: nil)
     }
+    
+    func obstacleView() {
+        myImageView.frame = CGRect(x: CGFloat.random(in: 25...(view.frame.size.width - 25)), y: 0.0, width: 50, height: 50)
+        myImageView.clipsToBounds = true
+        myImageView.contentMode = .scaleToFill
+        myImageView.image = UIImage(named: contentImages.randomElement()!)
+        self.view.addSubview(myImageView)
+    }
+    
     
     @IBAction func tapLeft(_ sender: UIButton) {
         if self.carImage.frame.origin.x <= 25 {
