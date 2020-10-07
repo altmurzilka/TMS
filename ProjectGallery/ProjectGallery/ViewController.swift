@@ -21,25 +21,20 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet var myView: UIImageView!
+    @IBOutlet var myViewLeft: UIImageView!
+    @IBOutlet var myViewRight: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myView.image = UIImage(named: imageName)
+        myViewRight.image = UIImage(named: imageName)
     }
-    
-    
     
     @IBAction func pressLeft(_ sender: UIButton) {
         
         if self.itemIndex > 0 {
             self.itemIndex = self.itemIndex - 1
-//            myView.image = UIImage(named: contentImages[itemIndex])
-            
-            UIView.transition(with: self.myView,
-                              duration: 1.0,
-                              options: .transitionCurlUp,
-                              animations: { self.myView.image = UIImage(named: self.contentImages[self.itemIndex])
-                              }, completion: nil)
+            myView.image = UIImage(named: contentImages[itemIndex])
             
         } else if self.itemIndex == 0 {
             self.itemIndex = contentImages.count - 1
