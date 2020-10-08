@@ -24,17 +24,21 @@ class ViewController: UIViewController {
     @IBOutlet var myViewLeft: UIImageView!
     @IBOutlet var myViewRight: UIImageView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @IBOutlet var rightViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet var leftViewLeadingConstraint: NSLayoutConstraint!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         myView.image = UIImage(named: imageName)
-        myViewRight.image = UIImage(named: imageName)
     }
     
     @IBAction func pressLeft(_ sender: UIButton) {
         
         if self.itemIndex > 0 {
             self.itemIndex = self.itemIndex - 1
-            myView.image = UIImage(named: contentImages[itemIndex])
+            myViewLeft.image = UIImage(named: contentImages[itemIndex])
+            
+            moveLeft()
             
         } else if self.itemIndex == 0 {
             self.itemIndex = contentImages.count - 1
@@ -54,6 +58,16 @@ class ViewController: UIViewController {
             myView.image = UIImage(named: contentImages[itemIndex])
             
         }
+    }
+    
+    func moveLeft() {
+        rightViewTrailingConstraint.constant += myViewLeft.frame.size.width
+        
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: .curveEaseOut, animations: {
+          self.view.layoutIfNeeded()
+        }, completion: { finished in
+          print("Basket doors opened!")
+        })
     }
     
     
