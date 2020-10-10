@@ -100,11 +100,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="leftImageView" destination="182-S0-ySK" id="tiN-L1-FMJ"/>
                         <outlet property="leftViewLeadingConstraint" destination="6a3-R9-vzd" id="CrU-7a-NUs"/>
                         <outlet property="myView" destination="iJf-4a-cZz" id="kNg-rP-xXF"/>
-                        <outlet property="myViewLeft" destination="Vrd-Fs-Y8R" id="KKn-3v-c4F"/>
-                        <outlet property="myViewRight" destination="182-S0-ySK" id="9xl-yi-Rpb"/>
-                        <outlet property="rightViewTrailingConstraint" destination="bMm-4M-Eue" id="d7r-HE-pBh"/>
+                        <outlet property="rightImageView" destination="Vrd-Fs-Y8R" id="zuv-VH-7Pt"/>
+                        <outlet property="rightViewTrailingConstraint" destination="bMm-4M-Eue" id="nAa-dA-9Qb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

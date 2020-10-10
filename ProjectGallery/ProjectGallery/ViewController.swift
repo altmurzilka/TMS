@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet var myView: UIImageView!
-    @IBOutlet var myViewLeft: UIImageView!
-    @IBOutlet var myViewRight: UIImageView!
+    @IBOutlet var leftImageView: UIImageView!
+    @IBOutlet var rightImageView: UIImageView!
     
     @IBOutlet var rightViewTrailingConstraint: NSLayoutConstraint!
     @IBOutlet var leftViewLeadingConstraint: NSLayoutConstraint!
@@ -32,13 +32,16 @@ class ViewController: UIViewController {
         myView.image = UIImage(named: imageName)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     @IBAction func pressLeft(_ sender: UIButton) {
         
         if self.itemIndex > 0 {
             self.itemIndex = self.itemIndex - 1
-            myViewLeft.image = UIImage(named: contentImages[itemIndex])
+            myView.image = UIImage(named: contentImages[itemIndex])
             
-            moveLeft()
             
         } else if self.itemIndex == 0 {
             self.itemIndex = contentImages.count - 1
@@ -51,7 +54,8 @@ class ViewController: UIViewController {
         
         if itemIndex + 1 < contentImages.count {
             self.itemIndex = self.itemIndex + 1
-            myView.image = UIImage(named: contentImages[itemIndex])
+            rightImageView.image = UIImage(named: contentImages[itemIndex])
+            rightAnimation()
             
         } else if self.itemIndex == contentImages.count - 1 {
             self.itemIndex = 0
@@ -60,16 +64,17 @@ class ViewController: UIViewController {
         }
     }
     
-    func moveLeft() {
-        rightViewTrailingConstraint.constant += myViewLeft.frame.size.width
+    func rightAnimation() {
+        UIView.animate(withDuration: 1, animations: {
+            self.rightImageView.frame.origin.x = self.myView.frame.origin.x
+        }, completion: nil)
         
-        UIView.animate(withDuration: 0.7, delay: 0.0, options: .curveEaseOut, animations: {
-          self.view.layoutIfNeeded()
-        }, completion: { finished in
-          print("Basket doors opened!")
-        })
     }
     
-    
+    func viewToCopy() {
+        UIView.animate(withDuration: 1, delay: 2, options: [], animations: {
+            self.myView.image = UIImage(named: self.contentImages[self.itemIndex])
+        }, completion: nil)
+    }
 }
 
