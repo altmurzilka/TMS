@@ -7,10 +7,7 @@
 
 import UIKit
 
-
 class NewGameViewController: UIViewController {
-
-    let myImageView = UIImageView()
 
     @IBOutlet var supportingRoadView: UIImageView!
     @IBOutlet var roadView: UIImageView!
@@ -18,30 +15,35 @@ class NewGameViewController: UIViewController {
 
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
-
+    
+    var obstacleImageView = UIImageView()
+    
+    override func viewDidLoad() {
+        let randomIndex = Int(arc4random_uniform(UInt32(self.contentImages.count)))
+        self.obstacleImageView.image = UIImage(named: self.contentImages[randomIndex])
+        obstacleImageView.frame = CGRect(x: 100, y: 0, width: 100, height: 100)
+        view.addSubview(obstacleImageView)
+        obstacleView()
+    }
+    
     let contentImages = ["boy", "girl", "ball", "log"]
-    var imagesView = [UIImageView]()
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        obstacleView()
         roadMove()
     }
-
-
+    
     func roadMove() {
-        UIView.animate(withDuration: 7, delay: 3.0, options: [.repeat, .curveLinear], animations: {
+        UIView.animate(withDuration: 2, delay: 0.0, options: [.repeat, .curveLinear], animations: {
             self.roadView.frame = self.roadView.frame.offsetBy(dx: 0.0, dy: self.roadView.frame.size.height)
             self.supportingRoadView.frame = self.supportingRoadView.frame.offsetBy(dx: 0.0, dy: self.supportingRoadView.frame.size.height)
         }, completion: nil)
-
     }
 
     func obstacleView() {
-        myImageView.frame = CGRect(x: CGFloat.random(in: 25...(view.frame.size.width - 25)), y: 0.0, width: 50, height: 50)
-        myImageView.contentMode = .scaleToFill
-        myImageView.image = UIImage(named: contentImages.randomElement()!)
-        self.view.addSubview(myImageView)
+        UIView.animate(withDuration: 4, delay: 1.0, animations: {
+            self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height)
+        }, completion: nil)
     }
 
     @IBAction func tapLeft(_ sender: UIButton) {
