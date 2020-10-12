@@ -19,14 +19,10 @@ class NewGameViewController: UIViewController {
     var obstacleImageView = UIImageView()
     
     override func viewDidLoad() {
-        let randomIndex = Int(arc4random_uniform(UInt32(self.contentImages.count)))
-        self.obstacleImageView.image = UIImage(named: self.contentImages[randomIndex])
-        obstacleImageView.frame = CGRect(x: 100, y: 0, width: 100, height: 100)
-        view.addSubview(obstacleImageView)
         obstacleView()
     }
     
-    let contentImages = ["boy", "girl", "ball", "log"]
+    var contentImages = ["boy", "girl", "ball", "log"]
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,8 +37,9 @@ class NewGameViewController: UIViewController {
     }
 
     func obstacleView() {
-        UIView.animate(withDuration: 4, delay: 1.0, animations: {
-            self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height)
+        imageViewGenerator()
+        UIView.animate(withDuration: 3, delay: 1.0, options: [.repeat, .curveLinear], animations: {
+            self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height + 100)
         }, completion: nil)
     }
 
@@ -62,5 +59,14 @@ class NewGameViewController: UIViewController {
             rightButton.showsTouchWhenHighlighted = true
         }
     }
+    
+    func imageViewGenerator() {
+        contentImages.shuffle()
+        self.obstacleImageView.image = UIImage(named: self.contentImages[0])
+        obstacleImageView.frame = CGRect(x: CGFloat.random(in: 25...(self.view.frame.width - 125)), y: -100, width: 100, height: 100)
+        view.addSubview(obstacleImageView)
+    }
+    
 }
+
 

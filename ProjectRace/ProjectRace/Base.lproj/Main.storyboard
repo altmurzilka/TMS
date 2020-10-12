@@ -16,33 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqR-Ym-XDU">
-                                <rect key="frame" x="170" y="373" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Game"/>
-                                <connections>
-                                    <action selector="NewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Blc-B6-nyy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-xU-ZUS">
-                                <rect key="frame" x="179" y="432" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Records"/>
-                                <connections>
-                                    <action selector="RecordsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jh0-p2-PnH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tv-uo-Yxm">
-                                <rect key="frame" x="179" y="493" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <action selector="Settings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hsm-fO-N4z"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-nb-dzi">
+                                <rect key="frame" x="157" y="348" width="100" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqR-Ym-XDU">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="66.5"/>
+                                        <state key="normal" title="New Game"/>
+                                        <connections>
+                                            <action selector="NewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Blc-B6-nyy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-xU-ZUS">
+                                        <rect key="frame" x="0.0" y="66.5" width="100" height="67"/>
+                                        <state key="normal" title="Records"/>
+                                        <connections>
+                                            <action selector="RecordsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jh0-p2-PnH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tv-uo-Yxm">
+                                        <rect key="frame" x="0.0" y="133.5" width="100" height="66.5"/>
+                                        <state key="normal" title="Settings"/>
+                                        <connections>
+                                            <action selector="Settings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hsm-fO-N4z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2tv-uo-Yxm" firstAttribute="width" secondItem="tqR-Ym-XDU" secondAttribute="width" id="2pC-IE-edO"/>
+                                    <constraint firstItem="ehH-xU-ZUS" firstAttribute="height" secondItem="tqR-Ym-XDU" secondAttribute="height" id="85c-99-oeW"/>
+                                    <constraint firstAttribute="height" constant="200" id="94t-zF-KzL"/>
+                                    <constraint firstItem="ehH-xU-ZUS" firstAttribute="width" secondItem="tqR-Ym-XDU" secondAttribute="width" id="SAV-gi-AQ0"/>
+                                    <constraint firstItem="2tv-uo-Yxm" firstAttribute="height" secondItem="tqR-Ym-XDU" secondAttribute="height" id="V3s-5N-Icd"/>
+                                    <constraint firstAttribute="width" constant="100" id="ytz-iX-J3n"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xjh-nb-dzi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H4T-le-8ib"/>
+                            <constraint firstItem="xjh-nb-dzi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xAu-f1-XF1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HHK-yT-bOs"/>
                 </viewController>
