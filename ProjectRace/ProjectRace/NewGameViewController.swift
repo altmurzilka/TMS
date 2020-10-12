@@ -8,11 +8,11 @@
 import UIKit
 
 class NewGameViewController: UIViewController {
-
+    
     @IBOutlet var supportingRoadView: UIImageView!
     @IBOutlet var roadView: UIImageView!
     @IBOutlet var carImage: UIImageView!
-
+    
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
     
@@ -23,10 +23,16 @@ class NewGameViewController: UIViewController {
     }
     
     var contentImages = ["boy", "girl", "ball", "log"]
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         roadMove()
+    }
+    
+    @objc func fireTimer() {
+        if self.carImage.frame.intersects(self.obstacleImageView.frame) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func roadMove() {
@@ -35,14 +41,16 @@ class NewGameViewController: UIViewController {
             self.supportingRoadView.frame = self.supportingRoadView.frame.offsetBy(dx: 0.0, dy: self.supportingRoadView.frame.size.height)
         }, completion: nil)
     }
-
+    
     func obstacleView() {
         imageViewGenerator()
+        let displayLink = CADisplayLink(target: self, selector: #selector(self.fireTimer))
+        displayLink.add(to: .current, forMode: .common)
         UIView.animate(withDuration: 3, delay: 1.0, options: [.repeat, .curveLinear], animations: {
             self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height + 100)
         }, completion: nil)
     }
-
+    
     @IBAction func tapLeft(_ sender: UIButton) {
         if self.carImage.frame.origin.x <= 25 {
             self.navigationController?.popToRootViewController(animated: true)
@@ -51,6 +59,7 @@ class NewGameViewController: UIViewController {
             leftButton.showsTouchWhenHighlighted = true
         }
     }
+    
     @IBAction func tapRight(_ sender: UIButton) {
         if self.carImage.frame.maxX >= view.frame.size.width - 25 {
             self.navigationController?.popToRootViewController(animated: true)

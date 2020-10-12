@@ -18,15 +18,21 @@ class ViewController: UIViewController {
         let height = self.view.frame.size.height
         
         gradient.frame = CGRect(x: width / 2 - 50, y: height / 2 - 50, width: 100, height: 100)
-        gradient.cornerRadius = 50.0
-        gradient.colors = [UIColor.red.cgColor, UIColor.white.cgColor]
-        gradient.masksToBounds = false
-        gradient.shadowColor = UIColor.black.cgColor
-        gradient.shadowOpacity = 1
-        gradient.shadowOffset = .zero
-        gradient.shadowRadius = 50
-        gradient.shouldRasterize = true
-        gradient.rasterizationScale = UIScreen.main.scale
+        gradient.customView()
         view.layer.addSublayer(gradient)
+    }
+}
+
+extension CAGradientLayer {
+    func customView() {
+        self.cornerRadius = 50.0
+        self.colors = [UIColor.red.cgColor, UIColor.white.cgColor]
+        self.masksToBounds = false
+        self.shadowColor = UIColor.black.cgColor
+        self.shadowOpacity = 1
+        self.shadowOffset = .zero
+        self.shadowRadius = 50
+        self.shouldRasterize = true
+        self.rasterizationScale = UIScreen.main.scale
     }
 }
