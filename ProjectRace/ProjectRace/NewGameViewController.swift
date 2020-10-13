@@ -29,12 +29,6 @@ class NewGameViewController: UIViewController {
         roadMove()
     }
     
-    @objc func fireTimer() {
-        if self.carImage.frame.intersects(self.obstacleImageView.frame) {
-            self.navigationController?.popToRootViewController(animated: true)
-        }
-    }
-    
     func roadMove() {
         UIView.animate(withDuration: 2, delay: 0.0, options: [.repeat, .curveLinear], animations: {
             self.roadView.frame = self.roadView.frame.offsetBy(dx: 0.0, dy: self.roadView.frame.size.height)
@@ -44,11 +38,6 @@ class NewGameViewController: UIViewController {
     
     func obstacleView() {
         imageViewGenerator()
-        let displayLink = CADisplayLink(target: self, selector: #selector(self.fireTimer))
-        displayLink.add(to: .current, forMode: .common)
-        UIView.animate(withDuration: 3, delay: 1.0, options: [.repeat, .curveLinear], animations: {
-            self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height + 100)
-        }, completion: nil)
     }
     
     @IBAction func tapLeft(_ sender: UIButton) {
@@ -70,10 +59,22 @@ class NewGameViewController: UIViewController {
     }
     
     func imageViewGenerator() {
+        let displayLink = CADisplayLink(target: self, selector: #selector(self.fireTimer))
+        displayLink.add(to: .current, forMode: .common)
         contentImages.shuffle()
         self.obstacleImageView.image = UIImage(named: self.contentImages[0])
-        obstacleImageView.frame = CGRect(x: CGFloat.random(in: 25...(self.view.frame.width - 125)), y: -100, width: 100, height: 100)
+        obstacleImageView.frame = CGRect(x: CGFloat.random(in: 25...(self.view.frame.width - 125)), y: -100, width: 70, height: 70)
         view.addSubview(obstacleImageView)
+        
+        UIView.animate(withDuration: 3, delay: 1.0, options: [.repeat, .curveLinear], animations: {
+            self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height + 100)
+        }, completion: nil)
+    }
+    
+    @objc func fireTimer() {
+        if self.carImage.layer.presentation()!.frame.intersects(self.obstacleImageView.layer.presentation()!.frame) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
 }
