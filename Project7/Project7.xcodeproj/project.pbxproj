@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F12C1573253622F7004506BC /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.otf"; sourceTree = "<group>"; };
 		F1A08B26252643D000B81C7C /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A08B29252643D000B81C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1A08B2B252643D000B81C7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		F1A08B28252643D000B81C7C /* Project7 */ = {
 			isa = PBXGroup;
 			children = (
+				F12C1573253622F7004506BC /* GreatVibes-Regular.otf */,
 				F1A08B29252643D000B81C7C /* AppDelegate.swift */,
 				F1A08B2B252643D000B81C7C /* SceneDelegate.swift */,
 				F1A08B2D252643D000B81C7C /* ViewController.swift */,

@@ -18,6 +18,8 @@ class NewGameViewController: UIViewController {
     
     var obstacleImageView = UIImageView()
     
+    var timer = Timer()
+    
     override func viewDidLoad() {
         obstacleView()
     }
@@ -61,14 +63,17 @@ class NewGameViewController: UIViewController {
     func imageViewGenerator() {
         let displayLink = CADisplayLink(target: self, selector: #selector(self.fireTimer))
         displayLink.add(to: .current, forMode: .common)
-        contentImages.shuffle()
+        self.contentImages.shuffle()
         self.obstacleImageView.image = UIImage(named: self.contentImages[0])
-        obstacleImageView.frame = CGRect(x: CGFloat.random(in: 25...(self.view.frame.width - 125)), y: -100, width: 70, height: 70)
-        view.addSubview(obstacleImageView)
+        self.obstacleImageView.frame = CGRect(x: CGFloat.random(in: 25...(self.view.frame.width - 125)), y: -100, width: 70, height: 70)
+        self.obstacleImageView.contentMode = .scaleToFill
+        self.view.addSubview(self.obstacleImageView)
         
         UIView.animate(withDuration: 3, delay: 1.0, options: [.repeat, .curveLinear], animations: {
             self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height + 100)
-        }, completion: nil)
+        }, completion: { _ in
+            self.obstacleImageView.removeFromSuperview()
+        })
     }
     
     @objc func fireTimer() {
