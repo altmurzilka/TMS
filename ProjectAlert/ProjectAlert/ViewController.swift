@@ -16,24 +16,26 @@ class ViewController: UIViewController {
 
         alertController.addTextField { (textField : UITextField!) in
             textField.placeholder = "Enter password"
+            textField.isSecureTextEntry = true
         }
 
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: { alert in
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
             
-            firstTextField.isSecureTextEntry = true
-            secondTextField.isSecureTextEntry = true
             
-            if firstTextField == secondTextField {
+            if firstTextField.text!.isEmpty || secondTextField.text!.isEmpty {
+                self.myLable.text = "Field are empty"
+            } else if firstTextField.text == secondTextField.text {
                 self.myLable.text = "Password added"
             } else {
                 self.myLable.text = "Password doesn't match"
             }
         })
         
-        alertController.addTextField { (textField : UITextField!) -> Void in
+        alertController.addTextField { (textField : UITextField!) in
             textField.placeholder = "Confirm password"
+            textField.isSecureTextEntry = true
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil )
