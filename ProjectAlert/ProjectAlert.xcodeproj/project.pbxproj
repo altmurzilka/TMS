@@ -13,6 +13,7 @@
 		F15B80562539F0C700E25561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15B80542539F0C700E25561 /* Main.storyboard */; };
 		F15B80582539F0C900E25561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15B80572539F0C900E25561 /* Assets.xcassets */; };
 		F15B805B2539F0C900E25561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15B80592539F0C900E25561 /* LaunchScreen.storyboard */; };
+		F1E79EDE253B2A31003FDD8A /* ThisNight.otf in Resources */ = {isa = PBXBuildFile; fileRef = F1E79EDD253B29E6003FDD8A /* ThisNight.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F15B80572539F0C900E25561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F15B805A2539F0C900E25561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F15B805C2539F0C900E25561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E79EDD253B29E6003FDD8A /* ThisNight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThisNight.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				F15B804E2539F0C700E25561 /* AppDelegate.swift */,
 				F15B80502539F0C700E25561 /* SceneDelegate.swift */,
+				F1E79EDD253B29E6003FDD8A /* ThisNight.otf */,
 				F15B80522539F0C700E25561 /* ViewController.swift */,
 				F15B80542539F0C700E25561 /* Main.storyboard */,
 				F15B80572539F0C900E25561 /* Assets.xcassets */,
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E79EDE253B2A31003FDD8A /* ThisNight.otf in Resources */,
 				F15B805B2539F0C900E25561 /* LaunchScreen.storyboard in Resources */,
 				F15B80582539F0C900E25561 /* Assets.xcassets in Resources */,
 				F15B80562539F0C700E25561 /* Main.storyboard in Resources */,
