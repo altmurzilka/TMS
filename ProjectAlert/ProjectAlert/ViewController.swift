@@ -12,27 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet var myLable: UILabel!
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        
-        for family: String in UIFont.familyNames {
-                print("\(family)")
-                for names: String in UIFont.fontNames(forFamilyName: family) {
-                    print("== \(names)")
-                }
-            }
-        
         promptForAnswer()
     }
     
     func promptForAnswer() {
         
-        let myShadow = NSShadow()
-        myShadow.shadowBlurRadius = 3
-        myShadow.shadowOffset = CGSize(width: 3, height: 3)
-        myShadow.shadowColor = UIColor.gray
-        
         let myAttribute: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor : UIColor.black,
-                                                          NSAttributedString.Key.font: UIFont(name: "ThisNight", size: 25.0)!,
-                                                          NSAttributedString.Key.shadow : myShadow]
+                                                          NSAttributedString.Key.font : UIFont(name: "ThisNight", size: 25.0)!]
         
         let alertController = UIAlertController(title: "Add your password", message: "", preferredStyle: .alert)
 
@@ -45,10 +31,10 @@ class ViewController: UIViewController {
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
             
-        //    let myAttribute = [  ]
-            
             if firstTextField.text!.isEmpty || secondTextField.text!.isEmpty {
-                self.myLable.text = "Field are empty"
+                
+                self.myLable.attributedText = NSAttributedString(string: "Field are empty", attributes: myAttribute)
+                
             } else if firstTextField.text == secondTextField.text {
                 
                 self.myLable.attributedText = NSAttributedString(string: "Password added!", attributes: myAttribute)

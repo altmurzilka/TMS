@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ProjectAlert
+//  ProjectAlertExtension
 //
-//  Created by Алтын on 10/16/20.
+//  Created by Алтын on 10/17/20.
 //
 
 import UIKit
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+
 
 }
 
