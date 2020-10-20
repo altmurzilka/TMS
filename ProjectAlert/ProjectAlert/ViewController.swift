@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             textField.isSecureTextEntry = true
         }
 
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil )
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(alert: UIAlertAction!) in print("Canceled")} )
 
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)

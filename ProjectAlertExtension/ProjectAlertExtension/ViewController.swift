@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        showAlert(alertText: "Wake up, Samurai...", alertMessage: "We have a city to burn.")
+        showCancelAlert(alertText: "Wake up, Samurai...", alertMessage: "We have a city to burn.", handler: "Some handler")
     }
     
 }
@@ -30,17 +30,21 @@ class ViewController: UIViewController {
 
 extension UIViewController {
     
-    func showAlert(alertText : String, alertMessage : String) {
+    func showAlert(alertText : String, alertMessage : String, handler: String) {
         let alert = UIAlertController(title: alertText, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: someHandler))
         
         self.present(alert, animated: true, completion: nil)
     }
     
-    func showCancelAlert(alertText : String, alertMessage : String) {
+    func showCancelAlert(alertText : String, alertMessage : String, handler: String) {
         let alert = UIAlertController(title: alertText, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Accept", style: UIAlertAction.Style.default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Decline", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Accept", style: UIAlertAction.Style.default, handler: someHandler))
+        alert.addAction(UIAlertAction(title: "Decline", style: UIAlertAction.Style.cancel, handler: {(alert: UIAlertAction!) in print("Canceled")}))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func someHandler(handler: UIAlertAction!) {
+        print("\(String(describing: handler))")
     }
 }
