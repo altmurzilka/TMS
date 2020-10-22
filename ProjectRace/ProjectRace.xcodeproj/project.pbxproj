@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F11D40A62541CC5700985A54 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D40A52541CC5700985A54 /* UserSettings.swift */; };
 		F1250AAD253480DC00040D6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1250AAC253480DC00040D6E /* Extensions.swift */; };
 		F1535AED25378261007A8C44 /* 19950.otf in Resources */ = {isa = PBXBuildFile; fileRef = F1535AEB253781CA007A8C44 /* 19950.otf */; };
 		F186623C251CE7F6000395BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186623B251CE7F6000395BC /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F11D40A52541CC5700985A54 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		F1250AAC253480DC00040D6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F1535AEB253781CA007A8C44 /* 19950.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 19950.otf; sourceTree = "<group>"; };
 		F1866238251CE7F6000395BC /* ProjectRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				F1866253251CEA36000395BC /* SettingsViewController.swift */,
 				F1250AAC253480DC00040D6E /* Extensions.swift */,
 				F1535AEC253781D2007A8C44 /* Fonts */,
+				F11D40A52541CC5700985A54 /* UserSettings.swift */,
 			);
 			path = ProjectRace;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				F1250AAD253480DC00040D6E /* Extensions.swift in Sources */,
 				F1866250251CEA1B000395BC /* NewGameViewController.swift in Sources */,
 				F186623C251CE7F6000395BC /* AppDelegate.swift in Sources */,
+				F11D40A62541CC5700985A54 /* UserSettings.swift in Sources */,
 				F1866252251CEA28000395BC /* RecordsViewController.swift in Sources */,
 				F1866254251CEA36000395BC /* SettingsViewController.swift in Sources */,
 			);
