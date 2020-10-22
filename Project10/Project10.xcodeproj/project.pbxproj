@@ -13,6 +13,8 @@
 		F197D4202541E9FA00E52674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F197D41E2541E9FA00E52674 /* Main.storyboard */; };
 		F197D4222541E9FA00E52674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F197D4212541E9FA00E52674 /* Assets.xcassets */; };
 		F197D4252541E9FA00E52674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F197D4232541E9FA00E52674 /* LaunchScreen.storyboard */; };
+		F197D42D2541FBD400E52674 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F197D42C2541FBD400E52674 /* CustomView.xib */; };
+		F197D42F2541FC2B00E52674 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197D42E2541FC2B00E52674 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F197D4212541E9FA00E52674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F197D4242541E9FA00E52674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F197D4262541E9FA00E52674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F197D42C2541FBD400E52674 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		F197D42E2541FC2B00E52674 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				F197D4182541E9FA00E52674 /* AppDelegate.swift */,
 				F197D41A2541E9FA00E52674 /* SceneDelegate.swift */,
 				F197D41C2541E9FA00E52674 /* ViewController.swift */,
+				F197D42C2541FBD400E52674 /* CustomView.xib */,
 				F197D41E2541E9FA00E52674 /* Main.storyboard */,
 				F197D4212541E9FA00E52674 /* Assets.xcassets */,
 				F197D4232541E9FA00E52674 /* LaunchScreen.storyboard */,
 				F197D4262541E9FA00E52674 /* Info.plist */,
+				F197D42E2541FC2B00E52674 /* CustomView.swift */,
 			);
 			path = Project10;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F197D4252541E9FA00E52674 /* LaunchScreen.storyboard in Resources */,
+				F197D42D2541FBD400E52674 /* CustomView.xib in Resources */,
 				F197D4222541E9FA00E52674 /* Assets.xcassets in Resources */,
 				F197D4202541E9FA00E52674 /* Main.storyboard in Resources */,
 			);
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F197D41D2541E9FA00E52674 /* ViewController.swift in Sources */,
+				F197D42F2541FC2B00E52674 /* CustomView.swift in Sources */,
 				F197D4192541E9FA00E52674 /* AppDelegate.swift in Sources */,
 				F197D41B2541E9FA00E52674 /* SceneDelegate.swift in Sources */,
 			);

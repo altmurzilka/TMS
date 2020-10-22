@@ -13,11 +13,38 @@ class ViewController: UIViewController {
     @IBOutlet var image2: UIImageView!
     @IBOutlet var image3: UIImageView!
     
+    var myImage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        performImagePicker()
+        let tapGestureRecognizer1 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        image1.isUserInteractionEnabled = true
+        image1.addGestureRecognizer(tapGestureRecognizer1)
+        
+        let tapGestureRecognizer2 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        image2.isUserInteractionEnabled = true
+        image2.addGestureRecognizer(tapGestureRecognizer2)
+        
+        let tapGestureRecognizer3 = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        image3.isUserInteractionEnabled = true
+        image3.addGestureRecognizer(tapGestureRecognizer3)
     }
     
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        let customView = CustomView.instanceFromNib()
+        let offset: CGFloat = 100
+        customView.frame = CGRect(x: self.view.frame.size.width/2 - offset, y: self.view.frame.size.height/2 - offset, width: 200, height: 200)
+        customView.label.text = "OLOLO"
+        customView.button.setTitle("OK", for: .normal)
+        self.view.addSubview(customView)
+    }
+    
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        performImagePicker()
+    }
     
     private func performImagePicker() {
         let imagePicker = UIImagePickerController()
@@ -43,9 +70,18 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
             chosenImage = image
         }
         
-        self.image1.image = chosenImage
-        self.image2.image = chosenImage
-        self.image3.image = chosenImage
+        switch myImage {
+        case image1:
+            self.image1.image = chosenImage
+
+        case image2:
+            self.image2.image = chosenImage
+
+        case image3:
+            self.image3.image = chosenImage
+        default:
+            print("lol")
+        }
         picker.dismiss(animated: true, completion: nil)
     }
     
