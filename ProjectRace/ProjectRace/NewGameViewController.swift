@@ -24,7 +24,7 @@ class NewGameViewController: UIViewController {
         imageViewGenerator()
     }
     
-    var contentImages = ["boy", "girl", "ball", "log"]
+    var contentImages = ["tree", "rock", "ball", "log"]
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

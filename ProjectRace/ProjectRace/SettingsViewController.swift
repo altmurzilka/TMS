@@ -16,7 +16,7 @@ enum Colors: String {
 
 class SettingsViewController: UIViewController {
     
-    let obstacles = ["boy", "girl", "ball", "log"]
+    let obstacles = ["tree", "rock", "ball", "log"]
     let vehicleColors = ["red", "green", "yellow", "blue"]
 
     @IBOutlet var usernameTextField: UITextField!

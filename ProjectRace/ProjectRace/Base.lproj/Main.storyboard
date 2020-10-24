@@ -58,11 +58,26 @@
                                     <constraint firstAttribute="width" constant="150" id="ytz-iX-J3n"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ0-Qf-JI6">
+                                <rect key="frame" x="30" y="194" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="buw-l3-hjf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Earth'sMightiestBold-Bold" family="Earth's Mightiest Bold" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zJ0-Qf-JI6" secondAttribute="trailing" constant="30" id="3EQ-eS-3ep"/>
+                            <constraint firstItem="zJ0-Qf-JI6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Fbi-xk-Dj4"/>
                             <constraint firstItem="xjh-nb-dzi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H4T-le-8ib"/>
+                            <constraint firstItem="zJ0-Qf-JI6" firstAttribute="centerX" secondItem="xjh-nb-dzi" secondAttribute="centerX" id="IVz-DM-aus"/>
+                            <constraint firstItem="zJ0-Qf-JI6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="aB9-7O-OWj"/>
                             <constraint firstItem="xjh-nb-dzi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xAu-f1-XF1"/>
                         </constraints>
                     </view>
