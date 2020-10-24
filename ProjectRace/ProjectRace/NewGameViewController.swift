@@ -18,10 +18,10 @@ class NewGameViewController: UIViewController {
     
     var obstacleImageView = UIImageView()
     
-    var timer = Timer()
+    var timer: Timer?
     
     override func viewDidLoad() {
-        obstacleView()
+        imageViewGenerator()
     }
     
     var contentImages = ["boy", "girl", "ball", "log"]
@@ -36,10 +36,6 @@ class NewGameViewController: UIViewController {
             self.roadView.frame = self.roadView.frame.offsetBy(dx: 0.0, dy: self.roadView.frame.size.height)
             self.supportingRoadView.frame = self.supportingRoadView.frame.offsetBy(dx: 0.0, dy: self.supportingRoadView.frame.size.height)
         }, completion: nil)
-    }
-    
-    func obstacleView() {
-        imageViewGenerator()
     }
     
     @IBAction func tapLeft(_ sender: UIButton) {
@@ -61,25 +57,28 @@ class NewGameViewController: UIViewController {
     }
     
     func imageViewGenerator() {
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(originTimer), userInfo: nil, repeats: true)
         let displayLink = CADisplayLink(target: self, selector: #selector(self.fireTimer))
         displayLink.add(to: .current, forMode: .common)
-        self.contentImages.shuffle()
-        self.obstacleImageView.image = UIImage(named: self.contentImages[0])
         self.obstacleImageView.frame = CGRect(x: CGFloat.random(in: 25...(self.view.frame.width - 125)), y: -100, width: 70, height: 70)
         self.obstacleImageView.contentMode = .scaleToFill
         self.view.addSubview(self.obstacleImageView)
         
-        UIView.animate(withDuration: 3, delay: 1.0, options: [.repeat, .curveLinear], animations: {
+        UIView.animate(withDuration: 3, delay: 0.0, options: [.repeat, .curveLinear], animations: {
             self.obstacleImageView.frame = self.obstacleImageView.frame.offsetBy(dx: 0.0, dy: self.view.frame.size.height + 100)
-        }, completion: { _ in
-            self.obstacleImageView.removeFromSuperview()
-        })
+        }, completion: nil)
     }
     
     @objc func fireTimer() {
         if self.carImage.layer.presentation()!.frame.intersects(self.obstacleImageView.layer.presentation()!.frame) {
             self.navigationController?.popToRootViewController(animated: true)
         }
+    }
+    
+    @objc func originTimer() {
+        self.contentImages.shuffle()
+        self.obstacleImageView.image = UIImage(named: self.contentImages[0])
+        self.obstacleImageView.frame.origin.x = CGFloat.random(in: 25...(self.view.frame.width - 125))
     }
     
 }
