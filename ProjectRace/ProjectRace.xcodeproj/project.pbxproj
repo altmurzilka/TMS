@@ -84,8 +84,8 @@
 				F1866251251CEA28000395BC /* RecordsViewController.swift */,
 				F1866253251CEA36000395BC /* SettingsViewController.swift */,
 				F1250AAC253480DC00040D6E /* Extensions.swift */,
-				F1535AEC253781D2007A8C44 /* Fonts */,
 				F11D40A52541CC5700985A54 /* UserSettings.swift */,
+				F1535AEC253781D2007A8C44 /* Fonts */,
 			);
 			path = ProjectRace;
 			sourceTree = "<group>";

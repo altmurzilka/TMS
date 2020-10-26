@@ -59,7 +59,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ0-Qf-JI6">
-                                <rect key="frame" x="92" y="194" width="230" height="50"/>
+                                <rect key="frame" x="130" y="194" width="154" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="buw-l3-hjf"/>
                                 </constraints>
@@ -259,6 +259,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="r2K-Ig-no1" eventType="touchUpInside" id="SFq-ig-aRy"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyR-wf-igO">
                                 <rect key="frame" x="30" y="425.5" width="354" height="150"/>

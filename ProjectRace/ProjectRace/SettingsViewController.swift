@@ -43,12 +43,19 @@ class SettingsViewController: UIViewController {
             pickedColor = .red
         }
     }
+
+    
+    @IBAction func saveButton(_ sender: UIButton) {
+        let nameTrimmingText = usernameTextField.text!.trimmingCharacters(in: .whitespaces)
+    }
     
     @IBAction func cancelButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
 }
+
+
 
 
 extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
