@@ -8,17 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var label: UILabel!
     @IBOutlet var myPicker: UIPickerView!
+    @IBOutlet var datePicker: UIDatePicker!
     
     var array = ["1", "2", "3", "4", "5", "6", "7", "8"]
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = array[0]
+        
+        let dateString = "12.07.1995"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM"
+        let date = dateFormatter.date(from: dateString)
+        
+        print(date)
     }
-
-
+    
+    @IBAction func didSetDatePicker(_ sender: UIDatePicker) {
+        print(sender.date)
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "dd MM"
+        label.text = dateFormatter.string(from: datePicker.date)
+        
+    }
+    
 }
 
 
