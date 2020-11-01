@@ -21,6 +21,10 @@ class NewGameViewController: UIViewController {
     var timer: Timer?
     
     override func viewDidLoad() {
+        if let user = UserDefaults.standard.value(UserSettings.self, forKey: "User") {
+            carImage.image = UIImage(named: user.vehicleColor)
+            obstacleImageView.image = UIImage(named: user.obstacleType)
+        }
         imageViewGenerator()
     }
     
@@ -76,8 +80,8 @@ class NewGameViewController: UIViewController {
     }
     
     @objc func originTimer() {
-        self.contentImages.shuffle()
-        self.obstacleImageView.image = UIImage(named: self.contentImages[0])
+        //        self.contentImages.shuffle()
+        //        self.obstacleImageView.image = UIImage(named: self.contentImages[0])
         self.obstacleImageView.frame.origin.x = CGFloat.random(in: 25...(self.view.frame.width - 125))
     }
     
