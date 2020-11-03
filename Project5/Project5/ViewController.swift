@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol ViewControllerDelegate: AnyObject {
+    func changeBgColor()
+}
+
 class ViewController: UIViewController {
+    
+    weak var delegate: ViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Button(_ sender: UIButton) {
+        self.delegate?.changeBgColor()
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         //
         //        controller.text = "OLOLO"

@@ -56,21 +56,19 @@
                                     <constraint firstAttribute="height" constant="40" id="21c-hn-kTQ"/>
                                 </constraints>
                             </stackView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgC-Xp-Nk8">
-                                <rect key="frame" x="0.0" y="44" width="413" height="768"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFJ-vq-Uet">
+                                <rect key="frame" x="20" y="44" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OgC-Xp-Nk8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2oP-GG-H5V"/>
-                            <constraint firstItem="OgC-Xp-Nk8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BRJ-Uq-kez"/>
-                            <constraint firstItem="lJQ-c4-htp" firstAttribute="top" secondItem="OgC-Xp-Nk8" secondAttribute="bottom" constant="10" id="Xw2-g2-wM8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lJQ-c4-htp" secondAttribute="bottom" id="aAL-zo-AWA"/>
                             <constraint firstItem="lJQ-c4-htp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="knc-En-kya"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJQ-c4-htp" secondAttribute="trailing" constant="100" id="wAT-aN-lEX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OgC-Xp-Nk8" secondAttribute="trailing" id="wWa-Qa-6JQ"/>
                         </constraints>
                     </view>
                 </viewController>
