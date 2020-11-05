@@ -12,6 +12,7 @@
 		F178E62925545D6900ABCFA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F178E62725545D6900ABCFA2 /* Main.storyboard */; };
 		F178E62B25545D6A00ABCFA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F178E62A25545D6A00ABCFA2 /* Assets.xcassets */; };
 		F178E62E25545D6A00ABCFA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F178E62C25545D6A00ABCFA2 /* LaunchScreen.storyboard */; };
+		F178E636255467AA00ABCFA2 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F178E635255467AA00ABCFA2 /* MyParticle.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F178E62A25545D6A00ABCFA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F178E62D25545D6A00ABCFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F178E62F25545D6A00ABCFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F178E635255467AA00ABCFA2 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				F178E62125545D6900ABCFA2 /* AppDelegate.swift */,
+				F178E635255467AA00ABCFA2 /* MyParticle.sks */,
 				F178E62525545D6900ABCFA2 /* ViewController.swift */,
 				F178E62725545D6900ABCFA2 /* Main.storyboard */,
 				F178E62A25545D6A00ABCFA2 /* Assets.xcassets */,
@@ -124,6 +127,7 @@
 				F178E62E25545D6A00ABCFA2 /* LaunchScreen.storyboard in Resources */,
 				F178E62B25545D6A00ABCFA2 /* Assets.xcassets in Resources */,
 				F178E62925545D6900ABCFA2 /* Main.storyboard in Resources */,
+				F178E636255467AA00ABCFA2 /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
