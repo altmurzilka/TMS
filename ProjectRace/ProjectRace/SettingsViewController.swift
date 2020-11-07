@@ -24,7 +24,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let user = UserDefaults.standard.value(UserSettings.self, forKey: "User") {
-            print(user.obstacleType)
             usernameTextField.text = user.nickname
             carImage.image = UIImage(named: user.vehicleColor)
             vehicleColorSegmentedControl.selectedSegmentIndex = vehicleColors.firstIndex(of: user.vehicleColor)!

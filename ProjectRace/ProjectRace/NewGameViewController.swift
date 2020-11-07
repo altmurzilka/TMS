@@ -12,6 +12,7 @@ class NewGameViewController: UIViewController {
     @IBOutlet var supportingRoadView: UIImageView!
     @IBOutlet var roadView: UIImageView!
     @IBOutlet var carImage: UIImageView!
+    @IBOutlet var myScoreLabel: UILabel!
     
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
@@ -20,13 +21,18 @@ class NewGameViewController: UIViewController {
     
     var timer: Timer?
     
-    var score: Int? 
+    var score: Int = 0 {
+        didSet {
+            myScoreLabel.text = "\(score)"
+        }
+    }
     
     override func viewDidLoad() {
         if let user = UserDefaults.standard.value(UserSettings.self, forKey: "User") {
             carImage.image = UIImage(named: user.vehicleColor)
             obstacleImageView.image = UIImage(named: user.obstacleType)
         }
+        
         imageViewGenerator()
     }
     
@@ -35,6 +41,12 @@ class NewGameViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         roadMove()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer!.invalidate()
+        timer = nil
     }
     
     func roadMove() {
@@ -62,6 +74,10 @@ class NewGameViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func imageViewGenerator() {
         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(originTimer), userInfo: nil, repeats: true)
         let displayLink = CADisplayLink(target: self, selector: #selector(self.fireTimer))
@@ -85,6 +101,9 @@ class NewGameViewController: UIViewController {
         //        self.contentImages.shuffle()
         //        self.obstacleImageView.image = UIImage(named: self.contentImages[0])
         self.obstacleImageView.frame.origin.x = CGFloat.random(in: 25...(self.view.frame.width - 125))
+        score += 1
+        self.myScoreLabel.text = "\(self.score)"
+        print(score)
     }
     
 }
