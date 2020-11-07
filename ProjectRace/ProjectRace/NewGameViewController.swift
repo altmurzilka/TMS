@@ -20,6 +20,8 @@ class NewGameViewController: UIViewController {
     
     var timer: Timer?
     
+    var score: Int? 
+    
     override func viewDidLoad() {
         if let user = UserDefaults.standard.value(UserSettings.self, forKey: "User") {
             carImage.image = UIImage(named: user.vehicleColor)

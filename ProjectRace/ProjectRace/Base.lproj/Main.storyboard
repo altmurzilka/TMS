@@ -155,6 +155,12 @@
                                     <action selector="tapRight:" destination="vgw-cq-gGl" eventType="touchUpInside" id="Dyj-tZ-v14"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bN9-6f-nuI">
+                                <rect key="frame" x="297" y="44" width="67" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XU7-1S-G6L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,6 +174,7 @@
                             <constraint firstAttribute="top" secondItem="231-sm-G3k" secondAttribute="top" id="Fdz-xh-G9E"/>
                             <constraint firstItem="LbR-xF-NnR" firstAttribute="centerX" secondItem="gNx-UN-ZwT" secondAttribute="centerX" id="Gfb-Tf-PX2"/>
                             <constraint firstAttribute="centerX" secondItem="tlJ-hT-5Eb" secondAttribute="centerX" constant="-50" id="La8-z8-W2H"/>
+                            <constraint firstItem="MrG-3i-flZ" firstAttribute="leading" secondItem="bN9-6f-nuI" secondAttribute="trailing" constant="25" id="M7k-MJ-Bg5"/>
                             <constraint firstAttribute="bottom" secondItem="tlJ-hT-5Eb" secondAttribute="bottom" constant="30" id="N0U-Yc-scZ"/>
                             <constraint firstItem="XU7-1S-G6L" firstAttribute="bottom" secondItem="LbR-xF-NnR" secondAttribute="bottom" constant="50" id="ZTC-gc-tlN"/>
                             <constraint firstItem="MrG-3i-flZ" firstAttribute="top" secondItem="gNx-UN-ZwT" secondAttribute="top" id="eVL-7m-Vpe"/>
