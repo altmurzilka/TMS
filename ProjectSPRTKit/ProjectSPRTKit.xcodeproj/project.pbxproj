@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F136731925545D3C007ABEE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F136731825545D3C007ABEE6 /* AppDelegate.swift */; };
-		F136731B25545D3C007ABEE6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F136731A25545D3C007ABEE6 /* GameScene.sks */; };
-		F136731D25545D3C007ABEE6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F136731C25545D3C007ABEE6 /* Actions.sks */; };
-		F136731F25545D3C007ABEE6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F136731E25545D3C007ABEE6 /* GameScene.swift */; };
-		F136732125545D3C007ABEE6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F136732025545D3C007ABEE6 /* GameViewController.swift */; };
-		F136732425545D3C007ABEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F136732225545D3C007ABEE6 /* Main.storyboard */; };
-		F136732625545D3D007ABEE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F136732525545D3D007ABEE6 /* Assets.xcassets */; };
+		F178E62225545D6900ABCFA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F178E62125545D6900ABCFA2 /* AppDelegate.swift */; };
+		F178E62625545D6900ABCFA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F178E62525545D6900ABCFA2 /* ViewController.swift */; };
+		F178E62925545D6900ABCFA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F178E62725545D6900ABCFA2 /* Main.storyboard */; };
+		F178E62B25545D6A00ABCFA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F178E62A25545D6A00ABCFA2 /* Assets.xcassets */; };
+		F178E62E25545D6A00ABCFA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F178E62C25545D6A00ABCFA2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F136731525545D3B007ABEE6 /* ProjectSpriteKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSpriteKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F136731825545D3C007ABEE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F136731A25545D3C007ABEE6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		F136731C25545D3C007ABEE6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		F136731E25545D3C007ABEE6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		F136732025545D3C007ABEE6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		F136732325545D3C007ABEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F136732525545D3D007ABEE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F136732725545D3D007ABEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F178E61E25545D6900ABCFA2 /* ProjectSPRTKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSPRTKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F178E62125545D6900ABCFA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F178E62525545D6900ABCFA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F178E62825545D6900ABCFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F178E62A25545D6A00ABCFA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F178E62D25545D6A00ABCFA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F178E62F25545D6A00ABCFA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F136731225545D3B007ABEE6 /* Frameworks */ = {
+		F178E61B25545D6900ABCFA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,72 +35,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F136730C25545D3B007ABEE6 = {
+		F178E61525545D6900ABCFA2 = {
 			isa = PBXGroup;
 			children = (
-				F136731725545D3B007ABEE6 /* ProjectSpriteKit */,
-				F136731625545D3B007ABEE6 /* Products */,
+				F178E62025545D6900ABCFA2 /* ProjectSPRTKit */,
+				F178E61F25545D6900ABCFA2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F136731625545D3B007ABEE6 /* Products */ = {
+		F178E61F25545D6900ABCFA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F136731525545D3B007ABEE6 /* ProjectSpriteKit.app */,
+				F178E61E25545D6900ABCFA2 /* ProjectSPRTKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F136731725545D3B007ABEE6 /* ProjectSpriteKit */ = {
+		F178E62025545D6900ABCFA2 /* ProjectSPRTKit */ = {
 			isa = PBXGroup;
 			children = (
-				F136731825545D3C007ABEE6 /* AppDelegate.swift */,
-				F136731A25545D3C007ABEE6 /* GameScene.sks */,
-				F136731C25545D3C007ABEE6 /* Actions.sks */,
-				F136731E25545D3C007ABEE6 /* GameScene.swift */,
-				F136732025545D3C007ABEE6 /* GameViewController.swift */,
-				F136732225545D3C007ABEE6 /* Main.storyboard */,
-				F136732525545D3D007ABEE6 /* Assets.xcassets */,
-				F136732725545D3D007ABEE6 /* Info.plist */,
+				F178E62125545D6900ABCFA2 /* AppDelegate.swift */,
+				F178E62525545D6900ABCFA2 /* ViewController.swift */,
+				F178E62725545D6900ABCFA2 /* Main.storyboard */,
+				F178E62A25545D6A00ABCFA2 /* Assets.xcassets */,
+				F178E62C25545D6A00ABCFA2 /* LaunchScreen.storyboard */,
+				F178E62F25545D6A00ABCFA2 /* Info.plist */,
 			);
-			path = ProjectSpriteKit;
+			path = ProjectSPRTKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F136731425545D3B007ABEE6 /* ProjectSpriteKit */ = {
+		F178E61D25545D6900ABCFA2 /* ProjectSPRTKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F136732A25545D3D007ABEE6 /* Build configuration list for PBXNativeTarget "ProjectSpriteKit" */;
+			buildConfigurationList = F178E63225545D6A00ABCFA2 /* Build configuration list for PBXNativeTarget "ProjectSPRTKit" */;
 			buildPhases = (
-				F136731125545D3B007ABEE6 /* Sources */,
-				F136731225545D3B007ABEE6 /* Frameworks */,
-				F136731325545D3B007ABEE6 /* Resources */,
+				F178E61A25545D6900ABCFA2 /* Sources */,
+				F178E61B25545D6900ABCFA2 /* Frameworks */,
+				F178E61C25545D6900ABCFA2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ProjectSpriteKit;
-			productName = ProjectSpriteKit;
-			productReference = F136731525545D3B007ABEE6 /* ProjectSpriteKit.app */;
+			name = ProjectSPRTKit;
+			productName = ProjectSPRTKit;
+			productReference = F178E61E25545D6900ABCFA2 /* ProjectSPRTKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F136730D25545D3B007ABEE6 /* Project object */ = {
+		F178E61625545D6900ABCFA2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					F136731425545D3B007ABEE6 = {
+					F178E61D25545D6900ABCFA2 = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
-			buildConfigurationList = F136731025545D3B007ABEE6 /* Build configuration list for PBXProject "ProjectSpriteKit" */;
+			buildConfigurationList = F178E61925545D6900ABCFA2 /* Build configuration list for PBXProject "ProjectSPRTKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,56 +106,62 @@
 				en,
 				Base,
 			);
-			mainGroup = F136730C25545D3B007ABEE6;
-			productRefGroup = F136731625545D3B007ABEE6 /* Products */;
+			mainGroup = F178E61525545D6900ABCFA2;
+			productRefGroup = F178E61F25545D6900ABCFA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F136731425545D3B007ABEE6 /* ProjectSpriteKit */,
+				F178E61D25545D6900ABCFA2 /* ProjectSPRTKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F136731325545D3B007ABEE6 /* Resources */ = {
+		F178E61C25545D6900ABCFA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F136732425545D3C007ABEE6 /* Main.storyboard in Resources */,
-				F136731B25545D3C007ABEE6 /* GameScene.sks in Resources */,
-				F136732625545D3D007ABEE6 /* Assets.xcassets in Resources */,
-				F136731D25545D3C007ABEE6 /* Actions.sks in Resources */,
+				F178E62E25545D6A00ABCFA2 /* LaunchScreen.storyboard in Resources */,
+				F178E62B25545D6A00ABCFA2 /* Assets.xcassets in Resources */,
+				F178E62925545D6900ABCFA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F136731125545D3B007ABEE6 /* Sources */ = {
+		F178E61A25545D6900ABCFA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F136731F25545D3C007ABEE6 /* GameScene.swift in Sources */,
-				F136732125545D3C007ABEE6 /* GameViewController.swift in Sources */,
-				F136731925545D3C007ABEE6 /* AppDelegate.swift in Sources */,
+				F178E62625545D6900ABCFA2 /* ViewController.swift in Sources */,
+				F178E62225545D6900ABCFA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F136732225545D3C007ABEE6 /* Main.storyboard */ = {
+		F178E62725545D6900ABCFA2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F136732325545D3C007ABEE6 /* Base */,
+				F178E62825545D6900ABCFA2 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F178E62C25545D6A00ABCFA2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F178E62D25545D6A00ABCFA2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F136732825545D3D007ABEE6 /* Debug */ = {
+		F178E63025545D6A00ABCFA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		F136732925545D3D007ABEE6 /* Release */ = {
+		F178E63125545D6A00ABCFA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,38 +277,38 @@
 			};
 			name = Release;
 		};
-		F136732B25545D3D007ABEE6 /* Debug */ = {
+		F178E63325545D6A00ABCFA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JW3YQAPPF;
-				INFOPLIST_FILE = ProjectSpriteKit/Info.plist;
+				INFOPLIST_FILE = ProjectSPRTKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.altmurzilka.ProjectSpriteKit;
+				PRODUCT_BUNDLE_IDENTIFIER = me.altmurzilka.ProjectSPRTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F136732C25545D3D007ABEE6 /* Release */ = {
+		F178E63425545D6A00ABCFA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JW3YQAPPF;
-				INFOPLIST_FILE = ProjectSpriteKit/Info.plist;
+				INFOPLIST_FILE = ProjectSPRTKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.altmurzilka.ProjectSpriteKit;
+				PRODUCT_BUNDLE_IDENTIFIER = me.altmurzilka.ProjectSPRTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,25 +318,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F136731025545D3B007ABEE6 /* Build configuration list for PBXProject "ProjectSpriteKit" */ = {
+		F178E61925545D6900ABCFA2 /* Build configuration list for PBXProject "ProjectSPRTKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F136732825545D3D007ABEE6 /* Debug */,
-				F136732925545D3D007ABEE6 /* Release */,
+				F178E63025545D6A00ABCFA2 /* Debug */,
+				F178E63125545D6A00ABCFA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F136732A25545D3D007ABEE6 /* Build configuration list for PBXNativeTarget "ProjectSpriteKit" */ = {
+		F178E63225545D6A00ABCFA2 /* Build configuration list for PBXNativeTarget "ProjectSPRTKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F136732B25545D3D007ABEE6 /* Debug */,
-				F136732C25545D3D007ABEE6 /* Release */,
+				F178E63325545D6A00ABCFA2 /* Debug */,
+				F178E63425545D6A00ABCFA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F136730D25545D3B007ABEE6 /* Project object */;
+	rootObject = F178E61625545D6900ABCFA2 /* Project object */;
 }
