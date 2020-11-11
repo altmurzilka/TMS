@@ -18,6 +18,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func buttonPressed(_ sender: UIButton) {
+        guard let lastValue = array.last else { return }
+        array.append(lastValue + 1)
+        tableView.reloadData()
     }
 }
 
@@ -34,8 +37,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

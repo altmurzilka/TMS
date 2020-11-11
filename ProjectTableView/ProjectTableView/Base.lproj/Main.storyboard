@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-le-zd4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iV9-le-zd4">
                                 <rect key="frame" x="20" y="188" width="374" height="540"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="mMB-ku-1ZM">
                                     <rect key="frame" x="0.0" y="99.5" width="374" height="1"/>
@@ -49,12 +48,11 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="SPN-qJ-0lw"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XCn-R3-RM1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vTM-h3-8mj"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-bn-v0H">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-bn-v0H">
                                 <rect key="frame" x="54" y="124" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hv-DY-we2"/>
@@ -63,6 +61,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iV9-le-zd4" secondAttribute="trailing" constant="20" id="8nj-tD-C3x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iV9-le-zd4" secondAttribute="bottom" constant="134" id="D6b-0C-6P2"/>
+                            <constraint firstItem="iV9-le-zd4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IpD-sX-SZe"/>
+                            <constraint firstItem="2O4-bn-v0H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="L0y-uP-MNZ"/>
+                            <constraint firstItem="2O4-bn-v0H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Sij-xx-bgY"/>
+                            <constraint firstItem="iV9-le-zd4" firstAttribute="top" secondItem="2O4-bn-v0H" secondAttribute="bottom" constant="34" id="sD7-NX-eva"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Be-fs-0iP"/>
                     <connections>
