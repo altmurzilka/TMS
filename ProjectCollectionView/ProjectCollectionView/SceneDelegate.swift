@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ProjectTableView
+//  ProjectCollectionView
 //
-//  Created by Алтын on 11/10/20.
+//  Created by Алтын on 11/12/20.
 //
 
 import UIKit
@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
